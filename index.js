@@ -16,7 +16,8 @@ async function run(){
         //console.log("Data base connected");
 
         app.post('/tasks',async(req,res)=>{
-          console.log("Post Api");
+          const userdata = req.body;
+          console.log(userdata);
         })
     }
     finally{
