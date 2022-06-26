@@ -20,6 +20,8 @@ async function run(){
 
         app.post('/tasks',async(req,res)=>{
           const userdata = req.body;
+          const result = await todoTable.insertOne(userdata);
+          res.json(result);
           //console.log(userdata);
         })
     }
