@@ -23,6 +23,10 @@ async function run(){
           const result = await todoTable.insertOne(userdata);
           res.json(result);
           //console.log(userdata);
+        });
+
+        app.get('/tasks',async(req,res)=>{
+          const alltask = todoTable.find({});
         })
     }
     finally{
