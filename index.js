@@ -11,6 +11,11 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 async function run(){
     try{
         await client.connect();
+        //console.log("Data base connected");
+
+        app.post('/tasks',async(req,res)={
+          console.log("Post Api");
+        })
     }
     finally{
 
