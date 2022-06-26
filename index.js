@@ -15,6 +15,7 @@ async function run(){
     try{
         await client.connect();
         const todoInfo = client.db("todoInfo");
+        const todoTable = todoInfo.collection("todoTable");
         //console.log("Data base connected");
 
         app.post('/tasks',async(req,res)=>{
