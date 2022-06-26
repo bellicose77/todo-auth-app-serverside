@@ -27,6 +27,8 @@ async function run(){
 
         app.get('/tasks',async(req,res)=>{
           const alltask = todoTable.find({});
+          const result = await alltask.toArray();
+          res.json(result);
         })
     }
     finally{
