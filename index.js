@@ -29,6 +29,10 @@ async function run(){
           const alltask = todoTable.find({});
           const result = await alltask.toArray();
           res.json(result);
+        });
+
+        app.delete('/tasks/:id',async(req,res)=>{
+          
         })
     }
     finally{
