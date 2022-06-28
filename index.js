@@ -36,7 +36,7 @@ async function run(){
           const id = req.params.id;
           const query = {ObjectId:'id'}
           const result = await todoTable.deleteOne(query);
-          console.log("id",id);
+          res.json(result);
 
         })
     }
