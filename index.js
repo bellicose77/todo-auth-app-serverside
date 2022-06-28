@@ -31,6 +31,13 @@ async function run(){
           const result = await alltask.toArray();
           res.json(result);
         });
+        app.get('/tasks/:id',async(req,res)=>{
+          const id = req.params.id;
+          const query = {_id:ObjectId(id)};
+          const result = await todoTable.findOne(query);
+          res.json(result);
+
+        })
 
         app.delete('/tasks/:id',async(req,res)=>{
           const id = req.params.id;
