@@ -35,7 +35,7 @@ async function run(){
         app.delete('/tasks/:id',async(req,res)=>{
           const id = req.params.id;
           const query = {ObjectId:'id'}
-          const result = await 
+          const result = await todoTable.deleteOne(query);
           console.log("id",id);
 
         })
