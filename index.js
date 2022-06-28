@@ -32,7 +32,9 @@ async function run(){
         });
 
         app.delete('/tasks/:id',async(req,res)=>{
-          
+          const id = req.params.id;
+          console.log("id",id);
+
         })
     }
     finally{
