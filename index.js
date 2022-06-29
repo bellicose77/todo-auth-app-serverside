@@ -39,6 +39,10 @@ async function run(){
 
         });
 
+        app.put('/tasks/:id',async(req,res)=>{
+          
+        })
+
         app.delete('/tasks/:id',async(req,res)=>{
           const id = req.params.id;
           const query = {_id:ObjectId(id)};
