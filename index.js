@@ -37,7 +37,7 @@ async function run(){
           const result = await todoTable.findOne(query);
           res.json(result);
 
-        })
+        });
 
         app.delete('/tasks/:id',async(req,res)=>{
           const id = req.params.id;
