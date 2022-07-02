@@ -40,7 +40,9 @@ async function run(){
         });
 
         app.put('/tasks/:id',async(req,res)=>{
-          
+          const id = req.params.id;
+          const data = req.body;
+          console.log(data);
         })
 
         app.delete('/tasks/:id',async(req,res)=>{
