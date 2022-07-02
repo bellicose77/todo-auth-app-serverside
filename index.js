@@ -50,7 +50,10 @@ async function run(){
               description:data.description,
               date:data.date
             }
+
           }
+          const result = await todoTable.updateOne(filter,updatedoc,options);
+          res.json(result);
           console.log(data);
         })
 
