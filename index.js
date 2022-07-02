@@ -45,7 +45,11 @@ async function run(){
           const filter = {_id:ObjectId(id)};
           const options = { upsert: true };
           const updatedoc={
-            
+            $set:{
+              title:data.title,
+              description:data.description,
+              date:data.date
+            }
           }
           console.log(data);
         })
